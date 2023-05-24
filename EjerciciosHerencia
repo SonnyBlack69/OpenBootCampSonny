@@ -1,0 +1,84 @@
+public class Main {
+    public static void main(String[] args) {
+        Cliente pesao = new Cliente();
+        Trabajador worker = new Trabajador();
+        
+        pesao.setEdad(25);
+        pesao.setNombre("Willyrex");
+        pesao.setTelefono(666111666);
+        pesao.setCredito(1000000);
+
+        worker.setEdad(45);
+        worker.setNombre("Raphael");
+        worker.setTelefono(699787878);
+        worker.setSalario(1000.01);
+
+        System.out.println("Me llamo " + pesao.getNombre() + ", tengo " + pesao.getEdad() + " años, mi numero es " + pesao.getTelefono() + " y tengo un credito de " + pesao.getCredito() + " de euros");
+        System.out.println("Me llamo " + worker.getNombre() + ", tengo " + worker.getEdad() + " años, mi numero es " + worker.getTelefono() + " y tengo un salario de " + worker.getSalario() + " de euros");
+    }
+
+    static class Persona {
+        int edad;
+        String nombre;
+        int telefono;
+
+    }
+        static class Cliente extends Persona {
+            int credito;
+
+            public void setEdad (int edad){
+                this.edad = edad;
+            }
+            public int getEdad (){
+                return this.edad;
+            }
+            public void setNombre (String nombre){
+                this.nombre = nombre;
+            }
+            public String getNombre (){
+                return this.nombre;
+            }
+            public void setTelefono (int telefono){
+                this.telefono = telefono;
+            }
+            public int getTelefono (){
+                return this.telefono;
+            }
+            public void setCredito (int credito){
+                this.credito = credito;
+            }
+            public int getCredito (){
+                return this.credito;
+            }
+
+        }
+
+        static class Trabajador extends Persona{
+            double salario;
+
+            public void setEdad (int edad){
+                this.edad = edad;
+            }
+            public int getEdad (){
+                return this.edad;
+            }
+            public void setNombre (String nombre){
+                this.nombre = nombre;
+            }
+            public String getNombre (){
+                return this.nombre;
+            }
+            public void setTelefono (int telefono){
+                this.telefono = telefono;
+            }
+            public int getTelefono (){
+                return this.telefono;
+            }
+            public void setSalario (double salario){
+                this.salario = salario;
+            }
+            public double getSalario (){
+                return this.salario;
+            }
+        }
+}

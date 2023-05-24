@@ -3,15 +3,15 @@ public class Main {
         Cliente pesao = new Cliente();
         Trabajador worker = new Trabajador();
         
-        pesao.setEdad(25);
-        pesao.setNombre("Willyrex");
-        pesao.setTelefono(666111666);
-        pesao.setCredito(1000000);
+        pesao.setEdad(25); // pesao.edad = 25
+        pesao.setNombre("Willyrex"); //pesao.nombre = "Willyrex"
+        pesao.setTelefono(666111666); //pesao.telefono = 666111666
+        pesao.setCredito(1000000); // pesao.credito = 100000
 
-        worker.setEdad(45);
-        worker.setNombre("Raphael");
-        worker.setTelefono(699787878);
-        worker.setSalario(1000.01);
+        worker.setEdad(45); // worker.edad = 45
+        worker.setNombre("Raphael"); // worker.nombre = "Raphael"
+        worker.setTelefono(699787878); // worker.telefono = 699787878
+        worker.setSalario(1000.01); //worker.salario = 1000.01
 
         System.out.println("Me llamo " + pesao.getNombre() + ", tengo " + pesao.getEdad() + " años, mi numero es " + pesao.getTelefono() + " y tengo un credito de " + pesao.getCredito() + " de euros");
         System.out.println("Me llamo " + worker.getNombre() + ", tengo " + worker.getEdad() + " años, mi numero es " + worker.getTelefono() + " y tengo un salario de " + worker.getSalario() + " de euros");
@@ -25,7 +25,8 @@ public class Main {
     }
         static class Cliente extends Persona {
             int credito;
-
+            
+// Los setters y los getters unicamente se utilizan cuando quieres adquirir valores de atributos que son privados. Se puede hacer así pero te va a llevar mas tiempo y a parte te vas a liar mucho mas.
             public void setEdad (int edad){
                 this.edad = edad;
             }

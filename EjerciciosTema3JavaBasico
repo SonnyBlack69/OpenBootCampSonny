@@ -1,0 +1,12 @@
+package Funciones;
+
+public class EjerciciosTema3 {
+    public static void main(String[] args) {
+        String[] nombres = {"Sergio", "Antonio", "Mauricio", "Ocelote"};
+
+        for(int i = 0; i < nombres.length; i++){
+            System.out.println(nombres[i]);
+        }
+
+    }
+}

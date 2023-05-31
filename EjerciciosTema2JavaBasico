@@ -1,16 +1,17 @@
 package JavaBasico;
-
+import java.util.Scanner;
 public class EjerciciosTema2JavaBasico {
+
     public static void main(String[] args) {
-
-        System.out.println(getPrecio(50));
-    }
-
-    static double getPrecio(double precio){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un precio: ");
+        double precio = scanner.nextDouble();
         double IVA = 0.21;
-        double precioIVA = 0;
-        
-        precioIVA = precio * IVA;
-        return precio + precioIVA;
+        double precioIVA = precio * IVA;
+
+        precio = precio + precioIVA;
+
+        System.out.println("El precio mas su respectivo IVA es: " + precio);
     }
+
 }

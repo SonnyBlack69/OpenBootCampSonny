@@ -1,0 +1,16 @@
+package JavaBasico;
+
+public class EjerciciosTema2JavaBasico {
+    public static void main(String[] args) {
+
+        System.out.println(getPrecio(50));
+    }
+
+    static double getPrecio(double precio){
+        double IVA = 0.21;
+        double precioIVA = 0;
+        
+        precioIVA = precio * IVA;
+        return precio + precioIVA;
+    }
+}

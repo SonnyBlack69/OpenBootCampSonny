@@ -1,0 +1,8 @@
+package JavaBasico;
+
+public class EjerciciosTema1JavaBasico {
+    public static void main(String[] args) {
+
+        System.out.println("byte " + " Short " + " Int " + " Long " + " Float " + " Double " + " Char " + " Integer " + " Long " + " Boolean " + " String ");
+    }
+}

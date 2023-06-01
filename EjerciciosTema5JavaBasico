@@ -1,0 +1,78 @@
+public class EjerciciosTema5 {
+    public static void main(String[] args) {
+        SmartDevice phone = new SmartPhone("Apple", "China", 1599, "Iphone 10", 10.5);
+        SmartDevice watch = new SmartWatch("Samsung", "Korea la buena (Norte)", 2000, "Galaxy 15", false);
+
+        System.out.println("El smartphone es " + phone + " \ny el smartwatch es " + watch);
+
+
+
+    }
+    public static class SmartDevice{
+         String fabricante;
+         String paisFabricacion;
+
+         public SmartDevice(){
+
+         }
+
+        public SmartDevice(String fabricante, String paisFabricacion) {
+            this.fabricante = fabricante;
+            this.paisFabricacion = paisFabricacion;
+        }
+    }
+
+    public static class SmartPhone extends SmartDevice{
+        double precio;
+        String modelo;
+        double tamañoPantalla;
+
+        public SmartPhone(){
+
+        }
+        public SmartPhone(String fabricante, String paisFabricacion, double precio, String modelo, double tamañoPantalla) {
+            super(fabricante, paisFabricacion);
+            this.precio = precio;
+            this.modelo = modelo;
+            this.tamañoPantalla = tamañoPantalla;
+        }
+
+        @Override
+        public String toString() {
+            return "SmartPhone{" +
+                    "precio=" + precio +
+                    ", modelo='" + modelo + '\'' +
+                    ", tamañoPantalla=" + tamañoPantalla +
+                    ", fabricante='" + fabricante + '\'' +
+                    ", paisFabricacion='" + paisFabricacion + '\'' +
+                    '}';
+        }
+    }
+    public static class SmartWatch extends SmartDevice{
+        double precio;
+        String modelo;
+        boolean tactil;
+
+        public SmartWatch(){
+
+        }
+
+        public SmartWatch(String fabricante, String paisFabricacion, double precio, String modelo, boolean tactil) {
+            super(fabricante,paisFabricacion);
+            this.precio = precio;
+            this.modelo = modelo;
+            this.tactil = tactil;
+        }
+
+        @Override
+        public String toString() {
+            return "SmartWatch{" +
+                    "precio=" + precio +
+                    ", modelo='" + modelo + '\'' +
+                    ", tactil=" + tactil +
+                    ", fabricante='" + fabricante + '\'' +
+                    ", paisFabricacion='" + paisFabricacion + '\'' +
+                    '}';
+        }
+    }
+}

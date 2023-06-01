@@ -1,0 +1,37 @@
+import java.util.List;
+
+public interface CocheCRUD {
+
+    void save();
+
+    void findAll();
+
+    void delete();
+}
+
+class CocheCRUDImpl implements CocheCRUD{
+
+    @Override
+    public void save() {
+        System.out.println("Metodo save()");
+    }
+
+    @Override
+    public void findAll() {
+
+        System.out.println("Metodo findAll()");
+    }
+
+    @Override
+    public void delete() {
+        System.out.println("Metodo delete()");
+    }
+
+    public static void main(String[] args) {
+        CocheCRUDImpl coche = new CocheCRUDImpl();
+
+        coche.delete();
+        coche.findAll();
+        coche.save();
+    }
+}

@@ -28,7 +28,7 @@ class CocheCRUDImpl implements CocheCRUD{
     }
 
     public static void main(String[] args) {
-        CocheCRUDImpl coche = new CocheCRUDImpl();
+        CocheCRUD coche = new CocheCRUDImpl;
 
         coche.delete();
         coche.findAll();
